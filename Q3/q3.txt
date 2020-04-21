@@ -1,0 +1,40 @@
+bundle install 
+bundle exec foreman start 
+bg
+curl -k https://localhost:8080
+
+
+curl -k -i -E client.pem https://localhost:8080 
+HTTP/1.1 400 Bad Request
+Server: nginx/1.6.2
+Date: Tue, 21 Apr 2020 22:32:43 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+curl: (35) error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol
+
+Specify the path to a client certificate with the ssl_client_certificate directive:
+
+server {
+    #...
+    ssl_client_certificate /etc/ssl/certs/ca.crt;
+    ssl_verify_client      optional;
+    #...
+}
+
+nginx is missing parts of this - 
+
+        location /upstream {
+            proxy_pass                    https://backend.example.com;
+            proxy_ssl_certificate         /etc/nginx/client.pem;
+            proxy_ssl_certificate_key     /etc/nginx/client.key;
+            proxy_ssl_protocols           TLSv1 TLSv1.1 TLSv1.2;
+            proxy_ssl_ciphers             HIGH:!aNULL:!MD5;
+            proxy_ssl_trusted_certificate /etc/nginx/trusted_ca_cert.crt;
+
+            proxy_ssl_verify        on;
+            proxy_ssl_verify_depth  2;
+            proxy_ssl_session_reuse on;
+        }
+
+
