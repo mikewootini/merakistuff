@@ -1,0 +1,25 @@
+The application currently runs, but it does not give me the correct output.  
+I'm not a ruby developer so I could use some more time with this to clean it up. 
+
+Current state of the application runs: 
+
+./swaptop.rb
+Swap space   PID   Process
+==========  =====  =======
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+Bad line: /proc/15264/smaps:Swap:                  0 kB
+<snip>
+Bad line: /proc/481/smaps:Swap:                  0 kB
+Bad line: /proc/481/smaps:Swap:                  0 kB
+Bad line: /proc/481/smaps:Swap:                  0 kB
+
+So this says to me I need more time with formatting, regex and data processing in this script. 
+
