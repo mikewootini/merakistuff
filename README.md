@@ -1,14 +1,20 @@
 # Meraki 
 
-Helpful Links 
 
-## Q1: Top Swap
+
+## Q1: Top Swap 
+
+About 50% done on this, my conclusion is in the status file of the directory.
 
 ## Q2: DNS Monitoring
 
+Spent the most time on this, and perhaps got pulled in a little too much making it robust and resilient. I believe it delivers all that is asked. 
+
 ## Q3: The Unicorn 
 
+About half way done on this as well - ran out of time.  This has something to do with the proxy passing on certificates I believe.  Information in the Q3
 
+Helpful Links I used
 
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
 
