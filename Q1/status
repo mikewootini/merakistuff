@@ -1,5 +1,6 @@
 The application currently runs, but it does not give me the correct output.  
 I'm not a ruby developer so I could use some more time with this to clean it up. 
+I would focus on the regex, pattern matching, and formatting in ruby for this. 
 
 Current state of the application runs: 
 
