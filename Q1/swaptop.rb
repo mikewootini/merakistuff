@@ -10,7 +10,13 @@ pid2swap = {}
 puts "Swap space   PID   Process"
 puts "==========  =====  ======="
 lines.each do |line|
-  if !line.match(//proc/(\d\+)/smaps:Swap:\s*(\d\+) kB/)
+  
+## original line
+##  if !line.match(//proc/(\d\+)/smaps:Swap:\s*(\d\+) kB/)
+##  need forward slashes, fix the + as well
+## 
+## used https://rubular.com/ to troubleshoot 
+  if !line.match(/\/proc\/(\d\+)\/smaps:Swap:\s*(\d\+) kB/)
     puts "Bad line: " + line
     next
   end
