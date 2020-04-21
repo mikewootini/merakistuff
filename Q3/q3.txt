@@ -48,4 +48,34 @@ nginx is missing parts of this -
             proxy_ssl_session_reuse on;
         }
 
+I enabled unicorn error logging as well to get more data and information.  Here's some details. 
+E, [2020-04-21T22:42:06.166416 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+E, [2020-04-21T22:42:06.166489 #13856] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2020-04-21T22:42:06.666800 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+E, [2020-04-21T22:42:06.666874 #13856] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2020-04-21T22:42:07.167180 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+E, [2020-04-21T22:42:07.167261 #13856] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2020-04-21T22:42:07.667596 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+E, [2020-04-21T22:42:07.667680 #13856] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2020-04-21T22:42:08.168010 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+E, [2020-04-21T22:42:08.168087 #13856] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2020-04-21T22:42:08.668404 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
+/home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:149:in `bind': Address already in use - bind(2) for 0.0.0.0:8081 (Errno::EADDRINUSE)
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:149:in `new_tcp_server'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:129:in `bind_listen'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:231:in `listen'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `each'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:130:in `start'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/bin/unicorn:23:in `load'
+	from /home/candidate/hw-assignment/3-the-unicorn-isnt-real/vendor/bundle/ruby/2.1.0/bin/unicorn:23:in `<main>'
+I, [2020-04-21T22:45:08.444938 #15270]  INFO -- : listening on addr=0.0.0.0:8081 fd=11
+I, [2020-04-21T22:45:08.445039 #15270]  INFO -- : worker=0 spawning...
+I, [2020-04-21T22:45:08.445708 #15270]  INFO -- : master process ready
+I, [2020-04-21T22:45:08.446167 #15275]  INFO -- : worker=0 spawned pid=15275
+I, [2020-04-21T22:45:08.446295 #15275]  INFO -- : Refreshing Gem list
+I, [2020-04-21T22:45:08.482132 #15275]  INFO -- : worker=0 ready
+127.0.0.1 - - [21/Apr/2020:22:45:38 +0000] "GET / HTTP/1.0" 200 49 0.0143
 
