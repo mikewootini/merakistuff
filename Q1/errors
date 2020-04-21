@@ -1,0 +1,14 @@
+swaptop.rb:13: unknown regexp options - prc
+swaptop.rb:13: syntax error, unexpected $undefined
+  if !line.match(//proc/(\d\+)/smaps:Swap:\s*(\d\+) kB/)
+                          ^
+swaptop.rb:13: syntax error, unexpected $undefined
+  if !line.match(//proc/(\d\+)/smaps:Swap:\s*(\d\+) kB/)
+                                               ^
+swaptop.rb:16: syntax error, unexpected keyword_end, expecting ')'
+swaptop.rb:19: syntax error, unexpected keyword_end, expecting ')'
+swaptop.rb:21: syntax error, unexpected keyword_do_block, expecting ')'
+...ce(0...options[:count]).each do |pid, kb|
+...                               ^
+swaptop.rb:21: syntax error, unexpected '|', expecting '='
+swaptop.rb:28: syntax error, unexpected keyword_end, expecting ')'
