@@ -1,10 +1,12 @@
 Initial run: 
 
->bundle install 
->bundle exec foreman start 
->bg
->curl -k https://localhost:8080
+bundle install 
+bundle exec foreman start 
+bg
+curl -k https://localhost:8080
 
+## 
+# confirmed check failed. 
 
 curl -k -i -E client.pem https://localhost:8080 
 HTTP/1.1 400 Bad Request
@@ -13,7 +15,14 @@ Date: Tue, 21 Apr 2020 22:32:43 GMT
 Transfer-Encoding: chunked
 Connection: keep-alive
 
+## tried unicorn directly. 
+
 curl: (35) error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol
+
+## shutdown the server version of nginx to avoid conflicts. 
+## having a look at the nginx config it could use more flushing out perhaps. 
+
+
 
 Specify the path to a client certificate with the ssl_client_certificate directive:
 
