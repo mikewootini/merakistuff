@@ -1,7 +1,9 @@
-bundle install 
-bundle exec foreman start 
-bg
-curl -k https://localhost:8080
+Initial run: 
+
+>bundle install 
+>bundle exec foreman start 
+>bg
+>curl -k https://localhost:8080
 
 
 curl -k -i -E client.pem https://localhost:8080 
