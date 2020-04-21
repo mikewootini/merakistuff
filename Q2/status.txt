@@ -1,0 +1,5 @@
+I believe this works as asked. 
+
+In order to enable for one hour or one minute uncomment the line for the sleep function. 
+I'd recommend installing this under a service user with proper permissions. 
+
