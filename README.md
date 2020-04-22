@@ -12,7 +12,13 @@ Spent the most time on this, and perhaps got pulled in a little too much making 
 
 ## Q3: The Unicorn 
 
-About half way done on this as well - ran out of time.  This has something to do with the proxy passing on certificates I believe.  Information in the Q3
+Complete  
+
+1. Which of rack, unicorn and nginx is generating the 400? How can you prove it?  (nginx)
+2. Can you narrow down the problem to a specific part of the request?  (proxy redirect is causing the issue)
+3. What is the bug that causes the '400 Bad Request' response? How did you find it? How can we fix  
+it?  (checking old configs as I've had this problem before.  The proxy forward and redirect was the key) 
+
 
 Helpful Links I used
 
