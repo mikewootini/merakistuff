@@ -57,6 +57,9 @@ Something like -
 
 Which is taken from my old work code for nginx and unicorn. 
 
+This lead me to add redirect off which seems to be the main cause as a redirect is not desired here. 
+
+
 I enabled unicorn error logging as well to get more data and information.  Here's some details. 
 E, [2020-04-21T22:42:06.166416 #13856] ERROR -- : adding listener failed addr=0.0.0.0:8081 (in use)
 E, [2020-04-21T22:42:06.166489 #13856] ERROR -- : retrying in 0.5 seconds (4 tries left)
