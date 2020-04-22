@@ -27,7 +27,7 @@ lines.each do |line|
 end
 
 pid2swap.sort {|a,b| -a[1] <=> -b[1] }.slice(0...options[:count]).each do |pid, kb|
-## Something is wrong with this ps statement 
+## Something is wrong with this ps statement - the -o option columns are the key
   psout = `ps -p #{pid} -o args=`.strip
   if psout.empty?
     printf "%s kB (no longer running)\n", kb
