@@ -4,6 +4,7 @@
 
 ## Q1: Top Swap 
 
+There is no applications using swap on the host so I installed "stress" in order to add things to memory to test the application. Examply run: `` stress -m 4 --vm-bytes 500M``
 About 50% done on this, my conclusion is in the status file of the directory.
 
 ## Q2: DNS Monitoring
