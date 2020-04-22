@@ -1,0 +1,12 @@
+candidate@ip-172-31-31-218:~/hw-assignment/3-the-unicorn-isnt-real$ curl -k -i -E client.pem https://localhost:8080
+HTTP/1.1 200 OK
+Server: nginx/1.6.2
+Date: Wed, 22 Apr 2020 00:25:14 GMT
+Content-Type: text/html;charset=utf-8
+Content-Length: 49
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+
+hello world! it's 2020-04-22 00:25:14 +0000 here
