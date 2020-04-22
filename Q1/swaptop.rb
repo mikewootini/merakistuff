@@ -15,7 +15,8 @@ lines.each do |line|
 ##  if !line.match(//proc/(\d\+)/smaps:Swap:\s*(\d\+) kB/)
 ##  need forward slashes, fix the + as well
 ## 
-## used https://rubular.com/ to troubleshoot 
+## used https://rubular.com/ to troubleshoot I also don't think this line does
+## what is expected as it shows every line 
   if !line.match(/\/proc\/(\d\+)\/smaps:Swap:\s*(\d\+) kB/)
 ## This line makes things very noisy so removing.     
 ##    puts "Bad line: " + line
@@ -26,6 +27,7 @@ lines.each do |line|
 end
 
 pid2swap.sort {|a,b| -a[1] <=> -b[1] }.slice(0...options[:count]).each do |pid, kb|
+## Something is wrong with this ps statement 
   psout = `ps -p #{pid} -o args=`.strip
   if psout.empty?
     printf "%s kB (no longer running)\n", kb
