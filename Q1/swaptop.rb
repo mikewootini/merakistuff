@@ -17,7 +17,8 @@ lines.each do |line|
 ## 
 ## used https://rubular.com/ to troubleshoot 
   if !line.match(/\/proc\/(\d\+)\/smaps:Swap:\s*(\d\+) kB/)
-    puts "Bad line: " + line
+## This line makes things very noisy so removing.     
+##    puts "Bad line: " + line
     next
   end
   pid, kb = $1, $2
